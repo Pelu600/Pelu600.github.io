@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Contacto {% endblock %}
+
+{% block content %}
+
+  <form action="" method="post", novalidate>
+
+      {{form.hidden_tag()}}
+
+    {{form.name.label}}
+    {{form.name(size = 25)}}
+    {% for error in form.name.errors %}
+    <span style = "color: red">{{error}}</span>
+    <br/>
+    {% endfor %}
+
+    <br/>
+
+    {{form.email.label}}
+    {{form.email}}
+    {% for error in form.email.errors %}
+    <span style = "color: red">{{error}}</span>
+    <br/>
+    {% endfor %}
+
+    <br/>
+
+    {{form.password.label}}
+    {{form.password}}
+    {% for error in form.name.errors %}
+    <span style = "color: red">{{error}}</span>
+    <br/>
+    {% endfor %}
+
+    <br/>
+     
+    {{form.submit}}
+
+  </form>
+
+{% endblock %}

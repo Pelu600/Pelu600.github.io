@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel = "stylesheet" href = "{{ url_for('static', filename = 'css/index.css')}}">
+  </head>
+  <body>
+
+      <ul id = "barra">
+
+        <li id = "elem"><a href="{{url_for('inicio')}}">Inicio</a></li>
+        <li id = "elem"><a href="{{url_for('servicios')}}">Servicios</a></li>
+        <li id = "elem"><a href="{{url_for('productos')}}">Productos</a></li>
+        <li><a href="{{url_for('contacto')}}">Contactos</a></li>
+
+      </ul>
+
+      {% block content %}
+
+      {% endblock %}
+
+  </body>
+</html>

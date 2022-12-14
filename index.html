@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+
+      Colorado mufa y LPMQTRMP!
+      <br>
+
+      La cantidad de empleados: {{numero_empleados}}
+
+      <br>
+
+      <a href="{{url_for('usuarios', numerousuario = 9)}}">A la pagina del usuario</a>
+
+      <br>
+
+      <a href="{{url_for('posts', npost = 0)}}">A la página de los posts</a>
+
+
+{% endblock %}
